@@ -11,6 +11,7 @@ public class _01_RobotRace {
 
 	public static void main(String[] args) {
 		Random a = new Random();
+		
 
 		// 2. create an array of 5 robots.
 		Robot[] rob = new Robot[5];
@@ -35,21 +36,31 @@ public class _01_RobotRace {
 		// screen.
 		while (isRaiseing) {
 			for (int i = 0; i < rob.length; i++) {
-				int num = a.nextInt(50)
+				int num = a.nextInt(50);
 				rob[i].move(num);
-				if (rob[i].getY() <= 1) {
-				 isRaiseing = false;
-				 JOptionPane.showMessageDialog(null, "    Robot  " + i +  " winner!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-			}}
+				if (rob[i].getY() <= 2) {
+					isRaiseing = false;
+					JOptionPane.showMessageDialog(null, "    Robot  " + i
+							+ " is winner..................................................................................................................................................................................................................sadly");
+				}
+			}
+		}
+
+		// 7. declare that robot the winner and throw it a party!
+		{
+
+		}
+		// 8. try different races with different amounts of robots.
+		for (int j = 0; j < 37; j++) {
+
+			// 9. make the robots race around a circular track.
+			for (int i = 0; i < rob.length; i++) {
+				int num = a.nextInt(50);
+
+				rob[i].turn(25);
+				rob[i].move(100);
+
+			}
 		}
 	}
-
-	// 7. declare that robot the winner and throw it a party!
-	{
-		
-	}
-	// 8. try different races with different amounts of robots.
-
-	// 9. make the robots race around a circular track.
-	
 }
